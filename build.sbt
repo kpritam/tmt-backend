@@ -9,6 +9,7 @@ inThisBuild(
       "jitpack" at "https://jitpack.io",
       Resolver.bintrayRepo("lonelyplanet", "maven")
     ),
+    dependencyOverrides += AkkaHttp.`akka-http-spray-json`,
     scalacOptions ++= Seq(
       "-encoding",
       "UTF-8",
@@ -25,6 +26,7 @@ lazy val `tmt-backend` = (project in file("tmt-backend"))
   .settings(
     libraryDependencies ++= Seq(
       CSW.`csw-services`,
-      CSW.`csw-framework`
+      CSW.`csw-framework`,
+      ESW.`esw-gateway-server`
     )
   )
