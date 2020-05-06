@@ -13,13 +13,11 @@ object BackendCommand {
         "Arguments passed to CswServices application, " +
           "run `sbt tmt-backend/runMain csw.services.Main start -h` to see all the options"
       )
-      @Short("c")
-      cswServicesArgs: List[String],
+      cswArgs: List[String],
       @HelpMessage(
         "Arguments passed to Gateway Server application, " +
           "run `sbt tmt-backend/runMain esw.gateway.server.GatewayMain start -h` to see all the options"
       )
-      @Short("c")
       gatewayArgs: List[String]
   ) extends BackendCommand
 }
