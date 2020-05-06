@@ -1,6 +1,6 @@
 package org.tmt.cli
 
-import caseapp.{HelpMessage, ExtraName => Short}
+import caseapp.HelpMessage
 import caseapp.CommandName
 
 sealed trait BackendCommand
